@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>SES TOPLAMA SİSTEMİ</title>
+    <style>
+        .button-33 {
+            font-size: 15px; /* Font boyutunu küçült */
+            padding: 5px 10px; /* İç boşlukları küçült */
+            margin: 1px; /* Kenar boşluklarını küçült */
+            width: auto; /* Genişliği otomatik ayarla */
+            height: auto; /* Yüksekliği otomatik ayarla */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Önceki HTML kodlarınız -->
+
+    <div class="container mt-3">
+        <!-- Diğer HTML içerikleri -->
+        
+        <!-- Kullanıcı bilgilerini giriş alanlarıyla al -->
+        <div class="form-group mt-3">
+            <label for="nickname">Takma Ad (Lütfen Türkçe karakter kullanmayınız):<span style="color: red;">Zorunlu*</span> </label>
+            <input type="text" class="form-control" id="nickname">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Cinsiyet:<span style="color: red;">Zorunlu*</span> </label>
+            <select class="form-control" id="gender">
+                <option value="M">Erkek</option>
+                <option value="F">Kadın</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Yaş (Sayı ile 34 vb.):<span style="color: red;">Zorunlu*</span> </label>
+            <input type="number" class="form-control" id="age">
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <hr class="new mt-4">
+        <div id="controls" class="mx-auto">
+            <div class="btn-group" role="group" aria-label="Korku">
+                <button type="button" id="korkuBtn1" class="play button-33">Korku 1</button>
+                <button type="button" id="korkuBtn2" class="play button-33">Korku 2</button>
+                <button type="button" id="korkuBtn3" class="play button-33">Korku 3</button>
+            </div>
+        </div>
+
+        <div id="controls" class="mx-auto">
+            <div class="btn-group" role="group" aria-label="Öfke">
+                <button type="button" id="ofkeBtn1" class="play button-33">Öfke 1</button>
+                <button type="button" id="ofkeBtn2" class="play button-33">Öfke 2</button>
+                <button type="button" id="ofkeBtn3" class="play button-33">Öfke 3</button>
+            </div>
+        </div>
+
+    <div id="controls" class="mx-auto">
+        <div class="btn-group" role="group" aria-label="Mutluluk">
+            <button type="button" id="mutlulukBtn1" class="play button-33">Mutluluk 1</button>
+            <button type="button" id="mutlulukBtn2" class="play button-33">Mutluluk 2</button>
+            <button type="button" id="mutlulukBtn3" class="play button-33">Mutluluk 3</button>
+        </div>
+    </div>
+
+    <div id="controls" class="mx-auto">
+        <div class="btn-group" role="group" aria-label="Üzüntü">
+            <button type="button" id="uzuntuBtn1" class="play button-33">Üzüntü 1</button>
+            <button type="button" id="uzuntuBtn2" class="play button-33">Üzüntü 2</button>
+            <button type="button" id="uzuntuBtn3" class="play button-33">Üzüntü 3</button>
+        </div>
+    </div>
+
+    <div id="controls" class="mx-auto">
+        <div class="btn-group" role="group" aria-label="Şaşkınlık">
+            <button type="button" id="saskinlikBtn1" class="play button-33">Şaşkınlık 1</button>
+            <button type="button" id="saskinlikBtn2" class="play button-33">Şaşkınlık 2</button>
+            <button type="button" id="saskinlikBtn3" class="play button-33">Şaşkınlık 3</button>
+        </div>
+    </div>
+
+    <div id="controls" class="mx-auto">
+        <div class="btn-group" role="group" aria-label="İğrenme">
+            <button type="button" id="igrenmeBtn1" class="play button-33">İğrenme 1</button>
+            <button type="button" id="igrenmeBtn2" class="play button-33">İğrenme 2</button>
+            <button type="button" id="igrenmeBtn3" class="play button-33">İğrenme 3</button>
+        </div>
+    </div>
+
+    <div id="controls" class="mx-auto">
+        <div class="btn-group" role="group" aria-label="Küçümseme">
+            <button type="button" id="kucumsemeBtn1" class="play button-33">Küçümseme 1</button>
+            <button type="button" id="kucumsemeBtn2" class="play button-33">Küçümseme 2</button>
+            <button type="button" id="kucumsemeBtn3" class="play button-33">Küçümseme 3</button>
+        </div>
+    </div>
+
+    <div id="controls" class="mx-auto">
+        <div class="btn-group" role="group" aria-label="Sakin">
+            <button type="button" id="sakinBtn1" class="play button-33">Sakin 1</button>
+            <button type="button" id="sakinBtn2" class="play button-33">Sakin 2</button>
+            <button type="button" id="sakinBtn3" class="play button-33">Sakin 3</button>
+        </div>
+    </div>
+    <hr class="new">
+
+    <div class="fontstyle kutu" id="div"></div>
+    
+    <div id="controls" class="mx-auto">
+        <button class="center" id="startt">KAYDI BAŞLAT</button>
+        <button class="center" id="stopp" disabled>DURDUR</button>
+    </div>
+
+    <hr class="new">
+    <div class="alert alert-danger" role="alert">
+        <p class="text-center"> KENDİNİZİ HAZIR HİSSETTİĞİNİZDE KAYDI BAŞLAT BUTONUNA TIKLAYINIZ. 
+                                SES KAYDINI SAYFANIN EN ALTINDA GÖREBİLİRSİNİZ. KAYDINIZI BEĞENMEDİĞİNİZ TAKDİRDE SAYFAYI YENİLEYİP TEKRAR KAYIT ALABİLİRSİNİZ.
+                                KAYIT ALDIKTAN SONRA SES DOSYASINI BİLGİSAYARINIZA İNDİRİP DOSYA SEÇ BUTONUNA TIKLAYARAK SUNUCUYA YÜKLEYİNİZ.
+        </p>
+    </div>
+
+    <hr class="new mt-4">
+    <h3 style="text-align:center">SAYFANIN EN ALTINDA BULUNAN SES DOSYASINI BİLGİSAYARINIZA İNDİRİNİZ.</h3>
+    <div align="center">
+        <img style="text-align:center" src="/images/sesindir.png" alt="sesindir">
+    </div>
+
+    <div id="formats"></div>
+    <ol id="recordingsList"></ol>
+
+    <hr class="new mt-0">
+    <h3 class="text-center">İNDİRDİĞİNİZ SES DOSYASINI YÜKLEYİNİZ.</h3>
+
+    <div class="form-group">
+        <label for="karaoke_sound">Karaoke Ses (Korku1, Öfke2 vb. yeşil kutuda tıkladığınız isimlendirme):<span style="color: red;">Zorunlu*</span> </label>
+        <input type="text" class="form-control" id="karaoke_sound">
+    </div>
+
+    <p>
+        <font color="blue"> <b>NOT:</b> Dosya seç butonuna basarak ses kayıtları kısmından indirdiğiniz dosyayı seçiniz. Dosya isimlendirmesi doldurduğunuz kutucuklara göre sistem tarafından otomatik olarak yapılmaktadır. </font>
+    </p>
+
+    <div class="mx-auto">
+        <input type="file" id="dirfile" onchange="saveFile(this)">
+    </div>
+
+    <hr class="new">
+    <p>
+        <font color="red"> <b>UYARI:</b> LÜTFEN BURADA BİRDEN FAZLA KAYIT BEKLETMEYİN, YENİ KAYIT ALMADAN ÖNCE SAYFAYI YENİLEYİNİZ. </font>
+    </p>
+
+    <p><strong>Ses Kayıtları:</strong></p>
+
+    <script src="https://github.com/padolsey-archive/jquery.lint--old/blob/master/jquery.lint.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+    <script src="/js/appKaraoke.js"></script>
+    <script src="/js/newapp2.js"></script>
+
+    <script>
+        // Sayfa yüklendiğinde Local Storage'daki bilgileri geri yükle
+        window.onload = function() {
+            if (localStorage.getItem('nickname')) {
+                document.getElementById('nickname').value = localStorage.getItem('nickname');
+            }
+            if (localStorage.getItem('gender')) {
+                document.getElementById('gender').value = localStorage.getItem('gender');
+            }
+            if (localStorage.getItem('age')) {
+                document.getElementById('age').value = localStorage.getItem('age');
+            }
+            if (localStorage.getItem('karaoke_sound')) {
+                document.getElementById('karaoke_sound').value = localStorage.getItem('karaoke_sound');
+            }
+        };
+
+        // Kullanıcı bilgilerini Local Storage'a kaydet
+        document.getElementById('nickname').addEventListener('input', function() {
+            localStorage.setItem('nickname', this.value);
+        });
+        document.getElementById('gender').addEventListener('change', function() {
+            localStorage.setItem('gender', this.value);
+        });
+        document.getElementById('age').addEventListener('input', function() {
+            localStorage.setItem('age', this.value);
+        });
+
+        function saveFile(event) {
+            const nickname = document.getElementById("nickname").value;
+            const age = document.getElementById("age").value;
+            const gender = document.getElementById("gender").value;
+            const karaoke_sound = document.getElementById("karaoke_sound").value;
+
+            if (!nickname || !age || !gender || !karaoke_sound) {
+                //hangi kutucukların boş olduğunu belirtmek için alert mesajı
+                if (!nickname) {
+                    alert('Lütfen takma adınızı giriniz.');
+                } else if (!gender) {
+                    alert('Lütfen cinsiyetinizi seçiniz.');
+                } else if (!age) {
+                    alert('Lütfen yaşınızı giriniz.');
+                } else if (!karaoke_sound) {
+                    alert('Lütfen karaoke sesinizi giriniz.');
+                }
+                //event içindeki dosyayı seçme işlemini kaldır
+                document.getElementById('dirfile').value = '';
+                return;
+            }
+
+            const xhr = new XMLHttpRequest();
+            const formData = new FormData();
+            const file = event.files[0];
+
+            const filename = `${nickname}_${gender}_${age}_${karaoke_sound}`;
+
+            formData.append('dirfile', file, filename);
+
+            xhr.onreadystatechange = (state) => {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        alert(`Ses kaydınız ${filename} ile sunucuya gönderilmiştir.`);
+                        startCountdown();
+                    } else {
+                        alert('Dosya yükleme sırasında bir hata oluştu.');
+                    }
+                }
+            };
+
+            xhr.timeout = 2000; // 2 saniye içinde cevap alamazsak timeout olacak ve hata dönecek, hata durumunda ontimeout çalışacak ve hata mesajı dönecek bu mesajı alert ile gösterebiliriz.
+            xhr.ontimeout = () => {
+                alert('Dosya yükleme sırasında bir hata oluştu.');
+            };
+            xhr.open('POST', '/upload-file');
+            xhr.send(formData);
+        }
+
+        function startCountdown() {
+            let seconds = 3;
+            const countdownInterval = setInterval(() => {
+                if (seconds === 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById('dirfile').value = '';
+                    return;
+                }
+                document.getElementById('dirfile').disabled = true;
+                document.getElementById('dirfile').value = `Dosya yüklendi. ${seconds} saniye sonra sayfa yenilenecek.`; // Dosya yüklendiğinde input alanını disable yap ve içine geri sayım yazdır
+                seconds--;
+            }, 1000);
+            setTimeout(() => {
+                location.reload();
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>
